@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Support helper">
+  <style>
+    .bubble { animation: float 2.4s ease-in-out infinite; transform-origin: center; }
+    .dot-a { animation: blink 1.4s ease-in-out infinite; }
+    .dot-b { animation: blink 1.4s ease-in-out .18s infinite; }
+    .dot-c { animation: blink 1.4s ease-in-out .36s infinite; }
+    .spark { animation: twinkle 1.8s ease-in-out infinite; transform-origin: center; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes blink {
+      0%, 80%, 100% { opacity: .35; transform: scale(.9); }
+      40% { opacity: 1; transform: scale(1.1); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: .45; transform: scale(.8); }
+      50% { opacity: 1; transform: scale(1.12); }
+    }
+  </style>
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#111827" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <circle cx="48" cy="48" r="44" fill="#f56b01"/>
+  <circle cx="48" cy="48" r="36" fill="#fff3eb" opacity=".18"/>
+  <g class="spark">
+    <path fill="#fff" d="M73 17l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/>
+    <path fill="#fff" opacity=".7" d="M22 66l1.5 3.5L27 71l-3.5 1.5L22 76l-1.5-3.5L17 71l3.5-1.5L22 66z"/>
+  </g>
+  <g class="bubble" filter="url(#shadow)">
+    <path fill="#fff" d="M26 30h44c5.5 0 10 4.5 10 10v22c0 5.5-4.5 10-10 10H47.5L34 80v-8h-8c-5.5 0-10-4.5-10-10V40c0-5.5 4.5-10 10-10z"/>
+    <path fill="#ffe0cc" d="M27 42c0-2.2 1.8-4 4-4h34c2.2 0 4 1.8 4 4v18c0 2.2-1.8 4-4 4H43.5L34 69v-5h-3c-2.2 0-4-1.8-4-4V42z"/>
+    <circle class="dot-a" cx="40" cy="52" r="4" fill="#f56b01"/>
+    <circle class="dot-b" cx="48" cy="52" r="4" fill="#f56b01"/>
+    <circle class="dot-c" cx="56" cy="52" r="4" fill="#f56b01"/>
+  </g>
+</svg>
